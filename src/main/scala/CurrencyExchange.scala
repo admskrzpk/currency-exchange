@@ -17,10 +17,8 @@ object CurrencyExchange extends App {
 
   val out = amounts.join(rates) { (amount, rate) => s"Amount after exchange is ${amount.toDouble * rate.toDouble} for amount $amount & rate $rate" }
   out.to("out")
-  println(out)
 
   val topology = builder.build
-  println(topology.describe)
 
   val props = new Properties()
   props.put(StreamsConfig.APPLICATION_ID_CONFIG, "CurrencyExchangeAPP_v.2")
