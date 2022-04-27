@@ -15,7 +15,7 @@ object CurrencyExchange extends App {
   val amounts: KStream[String, String] = builder.stream[String, String]("amounts")
   val rates: KTable[String, String] = builder.table[String, String]("rates")
 
-  val out = amounts.join(rates) { (amount, rate) => s"Amount after exchange is ${amount.toDouble * rate.toDouble}" }
+  val out = amounts.join(rates) { (amount, rate) => s"Amount after exchange is ${amount.toDouble * rate.toDouble} for amount $amount & rate $rate" }
   out.to("out")
   println(out)
 
