@@ -1,5 +1,5 @@
 # Exercise: Joining KStream with KTable (“Currency Exchange”)
-#Develop a Kafka Streams application that simulate a Currency Exchange.
+## Develop a Kafka Streams application that simulate a Currency Exchange.
 
 1. Use the high-level Streams DSL
 1. Use StreamsBuilder.stream to create a KStream for amounts to convert
