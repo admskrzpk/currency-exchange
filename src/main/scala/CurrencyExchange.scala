@@ -32,4 +32,5 @@ object CurrencyExchange extends App {
 
   val stream = new KafkaStreams(topology, props)
   stream.start()
+
 }
